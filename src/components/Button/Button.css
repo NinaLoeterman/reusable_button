@@ -3,6 +3,8 @@ button.button {
   text-decoration: none;
   color: var(--light);
   border-radius: 10px;
+  font-size: 1rem;
+  margin: 20px;
 }
 
 button.light {
@@ -19,5 +21,5 @@ button.accent {
 }
 
 button.outline_true {
-  outline: 1px solid var(--accent);
+  border: 1px solid var(--accent);
 }

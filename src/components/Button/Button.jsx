@@ -1,17 +1,20 @@
 import React from "react";
-import HomeIcon from "./icons/HomeIcon.jsx";
-import LoveIcon from "./icons/LoveIcon.jsx";
-import BookmarkIcon from "./icons/BookmarkIcon.jsx";
-import SendIcon from "./icons/SendIcon.jsx";
-import ChatIcon from "./icons/ChatIcon.jsx";
+import HomeIcon from "../icons/HomeIcon.jsx";
+import LoveIcon from "../icons/LoveIcon.jsx";
+import BookmarkIcon from "../icons/BookmarkIcon.jsx";
+import SendIcon from "../icons/SendIcon.jsx";
+import ChatIcon from "../icons/ChatIcon.jsx";
 import "./Button.css";
 
 const Button = ({
-  title,
-  type,
-  theme,
+  title = "submit",
+  type = "love",
+  theme = "light",
   size = "small",
   outlined = false,
+  onClick = () => {
+    alert("hello world");
+  },
   ...props
 }) => {
   const mapTypeToIcon = {
@@ -34,6 +37,7 @@ const Button = ({
     <div>
       {mapTypeToIcon[type] ? (
         <button
+          onClick={onClick}
           className={`button ${theme} outline_${outlined} ${props.className}`}
         >
           {title}
