@@ -10,14 +10,12 @@ const Button = ({
   title = "submit",
   type = "love",
   theme = "light",
-  size = "small",
   outlined = false,
   onClick = () => {
     alert("hello world");
   },
   ...props
 }) => {
-  
   const mapTypeToIcon = {
     home: (props) => <HomeIcon {...props} />,
     love: (props) => <LoveIcon {...props} />,
