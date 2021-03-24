@@ -3,5 +3,5 @@ A completely reusable button
 
 #### want to use it? clone the repo, then:
 #### ``` npm install ``` then ```npm start```
-#### or 
+##### or 
 #### ``` yarn install ``` then ```yarn start```
