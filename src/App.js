@@ -4,7 +4,7 @@ import Button from './components/Button';
 function App() {
   return (
     <div className="App">
-      <Button />
+      <Button title="save me" type="bookmark" theme="accent" />
     </div>
   );
 }
