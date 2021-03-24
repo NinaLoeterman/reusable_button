@@ -4,8 +4,16 @@ import LoveIcon from "./icons/LoveIcon.jsx";
 import BookmarkIcon from "./icons/BookmarkIcon.jsx";
 import SendIcon from "./icons/SendIcon.jsx";
 import ChatIcon from "./icons/ChatIcon.jsx";
+import "./Button.css";
 
-const Button = ({ title, type, theme, ...props }) => {
+const Button = ({
+  title,
+  type,
+  theme,
+  size = "small",
+  outlined = false,
+  ...props
+}) => {
   const mapTypeToIcon = {
     home: (props) => <HomeIcon {...props} />,
     love: (props) => <LoveIcon {...props} />,
@@ -15,19 +23,21 @@ const Button = ({ title, type, theme, ...props }) => {
   };
 
   const mapThemeToIconColor = {
-    light: "yellow",
-    dark: "navy",
-    accent: "purple",
+    light: "var(--accent)",
+    dark: "var(--accent)",
+    accent: "var(--light)",
   };
 
-  const iconColor = { fill: mapThemeToIconColor[theme] };
+  const iconProps = { fill: mapThemeToIconColor[theme] };
 
   return (
     <div>
       {mapTypeToIcon[type] ? (
-        <button className={`button__${theme} ${props.className}`}>
+        <button
+          className={`button ${theme} outline_${outlined} ${props.className}`}
+        >
           {title}
-          <div>{mapTypeToIcon[type](iconColor)}</div>
+          <div>{mapTypeToIcon[type](iconProps)}</div>
         </button>
       ) : (
         <div>button type does not exist</div>

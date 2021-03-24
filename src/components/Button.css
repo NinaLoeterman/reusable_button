@@ -1,0 +1,23 @@
+button.button {
+  border: none;
+  text-decoration: none;
+  color: var(--light);
+  border-radius: 10px;
+}
+
+button.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+button.dark {
+  background-color: var(--dark);
+}
+
+button.accent {
+  background-color: var(--accent);
+}
+
+button.outline_true {
+  outline: 1px solid var(--accent);
+}
