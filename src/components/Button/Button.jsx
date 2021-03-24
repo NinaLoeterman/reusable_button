@@ -17,6 +17,7 @@ const Button = ({
   },
   ...props
 }) => {
+  
   const mapTypeToIcon = {
     home: (props) => <HomeIcon {...props} />,
     love: (props) => <LoveIcon {...props} />,
