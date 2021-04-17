@@ -5,7 +5,8 @@ button.button {
   border-radius: 10px;
   font-size: 1rem;
   margin: 20px;
-  box-shadow: 0px 4px 10px rgba(25, 25, 25, 0.4)
+  box-shadow: 0px 4px 10px rgba(25, 25, 25, 0.4);
+  transition: all 0.3s;
 }
 
 button.light {
@@ -13,12 +14,26 @@ button.light {
   color: var(--dark);
 }
 
+button.light:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
 button.dark {
   background-color: var(--dark);
 }
 
+button.dark:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
 button.accent {
   background-color: var(--accent);
+}
+
+button.accent:hover {
+  background-color: var(--dark);
 }
 
 button.outline_true {
