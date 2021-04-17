@@ -7,14 +7,14 @@ import ChatIcon from "../icons/ChatIcon.jsx";
 import "./Button.css";
 
 const Button = ({
-  title = "submit",
-  type = "love",
+  title,
+  type,
   theme = "light",
   outlined = false,
   onClick = () => {
-    alert("hello world");
+    alert("Add an onClick property with a custom function");
   },
-  ...props
+  className,
 }) => {
   const mapTypeToIcon = {
     home: (props) => <HomeIcon {...props} />,
@@ -34,17 +34,15 @@ const Button = ({
 
   return (
     <div>
-      {mapTypeToIcon[type] ? (
-        <button
-          onClick={onClick}
-          className={`button ${theme} outline_${outlined} ${props.className}`}
-        >
-          {title}
+      <button
+        onClick={onClick}
+        className={`button ${theme} outline_${outlined} ${className}`}
+      >
+        {title && <div>{title}</div>}
+        {mapTypeToIcon[type] ? (
           <div className="button_icon">{mapTypeToIcon[type](iconProps)}</div>
-        </button>
-      ) : (
-        <div>button type does not exist</div>
-      )}
+        ) : !type ? null : "type doesn't exist" }
+      </button>
     </div>
   );
 };

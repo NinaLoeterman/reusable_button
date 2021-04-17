@@ -1,6 +1,6 @@
 button.button {
   border: none;
-  text-decoration: none;
+  outline: none;
   color: var(--light);
   border-radius: 10px;
   font-size: 1rem;
@@ -11,7 +11,9 @@ button.button {
 }
 
 div.button_icon {
-  padding-top: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 button.light {
@@ -33,11 +35,11 @@ button.dark:hover {
   color: var(--dark);
 }
 
-button.accent {
+.accent {
   background-color: var(--accent);
 }
 
-button.accent:hover {
+.accent:hover {
   background-color: var(--dark);
 }
 
