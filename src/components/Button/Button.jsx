@@ -40,7 +40,7 @@ const Button = ({
           className={`button ${theme} outline_${outlined} ${props.className}`}
         >
           {title}
-          <div>{mapTypeToIcon[type](iconProps)}</div>
+          <div className="button_icon">{mapTypeToIcon[type](iconProps)}</div>
         </button>
       ) : (
         <div>button type does not exist</div>
