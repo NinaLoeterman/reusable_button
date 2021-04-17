@@ -7,4 +7,12 @@ describe("Button", () => {
     const { container } = render(<Button title="click me" />);
     getByText(container, "click me");
   });
+
+  test("should handle click events", () => {
+    const handleClick = jest.fn();
+    render(<Button title="click me" onClick={handleClick} />);
+    const reusableButton = screen.getByRole("button");
+    fireEvent.click(reusableButton);
+    expect(handleClick).toBeCalled();
+  });
 });
