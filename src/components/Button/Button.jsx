@@ -9,10 +9,12 @@ import "./Button.css";
 const Button = ({
   title,
   type,
+  outlined,
   theme = "light",
-  outlined = false,
   onClick = () => {
-    alert("Add an onClick property with a custom function");
+    alert(
+      "Add an onClick property to Button, and pass a function to customize the onClick"
+    );
   },
   className,
 }) => {
@@ -41,7 +43,9 @@ const Button = ({
         {title && <div>{title}</div>}
         {mapTypeToIcon[type] ? (
           <div className="button_icon">{mapTypeToIcon[type](iconProps)}</div>
-        ) : !type ? null : "type doesn't exist" }
+        ) : !type ? null : (
+          "type doesn't exist"
+        )}
       </button>
     </div>
   );
