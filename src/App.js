@@ -12,7 +12,7 @@ function App() {
       <Button type="bookmark" onClick={doSomething} theme="accent" className="new_style" />
       <Button title="click me" theme="light" outlined />
       <Button type="love" theme="dark" />
-      <Button title="go home" type="home" theme="accent" />
+      <Button title="send" type="send" theme="accent" />
       <Button title="lets chat" type="chat" theme="light" />
     </div>
   );
