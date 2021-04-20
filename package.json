@@ -36,7 +36,7 @@
     ]
   },
   "description": "A completely reusable button",
-  "main": "index.js",
+  "main": "lib/index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
