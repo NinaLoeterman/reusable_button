@@ -1,0 +1,48 @@
+button.button {
+  border: none;
+  outline: none;
+  color: var(--light);
+  border-radius: 10px;
+  font-size: 1rem;
+  margin: 20px;
+  box-shadow: 0px 4px 10px rgba(25, 25, 25, 0.4);
+  transition: all 0.3s;
+  padding: 10px;
+}
+
+div.button_icon {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+button.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+button.light:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+button.dark {
+  background-color: var(--dark);
+}
+
+button.dark:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.accent {
+  background-color: var(--accent);
+}
+
+.accent:hover {
+  background-color: var(--dark);
+}
+
+button.outline_true {
+  border: 1px solid var(--accent);
+}
