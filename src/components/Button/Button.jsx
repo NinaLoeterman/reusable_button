@@ -4,7 +4,7 @@ import LoveIcon from "../icons/LoveIcon.jsx";
 import BookmarkIcon from "../icons/BookmarkIcon.jsx";
 import SendIcon from "../icons/SendIcon.jsx";
 import ChatIcon from "../icons/ChatIcon.jsx";
-import "./Button.css";
+import "reusable_button/dist/bundle.css";
 
 const Button = ({
   title,
